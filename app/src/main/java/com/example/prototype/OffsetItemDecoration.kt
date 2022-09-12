@@ -22,6 +22,9 @@ class OffsetItemDecoration(private val value: Int, private val str: String) : It
         if(type == "tab") {
             outRect.right = offset
             outRect.left = offset
+        } else if(type == "content") {
+            outRect.top = offset
+            outRect.bottom = offset
         } else {
             outRect.top = offset
             outRect.right = offset

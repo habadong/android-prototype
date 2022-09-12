@@ -1,5 +1,7 @@
 package com.example.prototype.adapter
 
+import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -9,20 +11,21 @@ import com.example.prototype.R
 import com.example.prototype.data.MainContentData
 import com.google.android.material.imageview.ShapeableImageView
 
-class MainAdapter(val itemList: List<MainContentData>): RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(private val context: Context): RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+    var datas = mutableListOf<MainContentData>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val view = LayoutInflater.from(context).inflate(R.layout.main_content_item, parent, false)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(datas[position])
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = datas.size
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val itemContent = itemView.findViewById<ShapeableImageView>(R.id.itemIvContent)
         private val itemTitle = itemView.findViewById<TextView>(R.id.tvTitle)
         private val itemText = itemView.findViewById<TextView>(R.id.tvText)
@@ -30,7 +33,6 @@ class MainAdapter(val itemList: List<MainContentData>): RecyclerView.Adapter<Mai
         fun bind(item: MainContentData) {
             itemTitle.text = item.contentTitle
             itemText.text = item.contentText
-
             Glide.with(itemView).load(item.contentImage).into(itemContent)
         }
     }
