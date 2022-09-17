@@ -11,4 +11,26 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="mypage_text_1">
+        안녕 나는 다이노탱이야
+        \n따뜻한 햇살에 일광욕을 하는걸 좋아해
+        \n오늘은 내친구 고미랑 같이 왔어
+        \n고미는 이런걸 별로 싫어하나봐
+        \n그래도 내가 하자고 했는데 따라와주고 좋은친구야
+    </string>
+    <string name="mypage_text_2">
+        안녕 나는 고미야
+        \n따뜻한 햇살에 일광욕을 하는걸 안좋아해
+        \n오늘은 내친구 다이노탱이랑 같이 왔어
+        \n다이노탱은 이런걸 엄청 좋아하나봐
+        \n나는 싫다고 했는데 억지로 데려오고 나쁜친구야
+    </string>
+    <string name="mypage_text_3">
+        안녕 나는 멜롱이야
+        \n따뜻한 햇살에 있으니 녹아 내릴것 같아
+        \n보아하니 다이노탱이 고미를 꼬신거 같아
+        \n고미만 불편하고 다이노탱은 혼자 즐기고 있어
+        \n근데 나는 왜 여기있는거야
+        \n빨리 집안으로 들여보내줘 곧 녹고 말거야
+    </string>
 </resources>

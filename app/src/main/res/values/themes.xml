@@ -21,7 +21,15 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Prototype.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Prototype.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+    </style>
 
     <style name="Theme.Prototype.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
